@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Campos de entrada do tipo TEXT</h2>
+    
+    <form>
+        <label for="pnome">Primeiro nome:</label> <br>
+        <!-- campo de preenchimento do nome junto ao nome padrao -->
+         <!-- id com o mesmo for para clicar e acionar -->
+        <input type="text" name="pname" id="pnome" value="Joao"> <br> 
+        <label for="unome">Ultimo nome:</label> <br>
+        <input type="text" name="lnome" id="unome" value="Silva"> 
+    </form> <br>
+    
+    <b>Observe 1</b>: o formulario em si nao é visivel. <br>
+    <b>Observe 2</b>: a largura padrao do campo de texto = <b>20</b> caracteres. <br>
+    <br> <hr>
+    <h2>Campos de entrada do tipo RADIO BUTTON</h2>
+    <p>Escolha seu linguagem web favorita:</p>
+    
+    <form>
+        <!-- checkbox, name igual para poder desmarcar a box -->
+        <input type="radio" name="fav_linguagem" id="html" value="HTML">
+        <!-- Descição da box -->
+        <label for="html">HTML</label><br>
+        <input type="radio" name="fav_linguagem" id="css" value="CSS">
+        <label for="css">CSS</label> <br>
+        <input type="radio" name="fav_linguagem" id="javascript" value="JavaScript">
+        <label for="javascript">JavaScript</label>
+    </form>
+    <br> <hr>
+    <h2>Campos de entrada do tipo SUBMIT BUTTON</h2>
+    
+    <form action="https://www.w3schools.com/action_page.php" target="_self">
+        <label for="pname">Primeiro nome:</label> <br>
+        <input type="text" id="phone" name="phone" value="Maria"> <br>
+        <label for="uname">Ultimo nome:</label><br>
+        <input type="text" id="lnome" name="unome" value="Flores"> <br><br>
+        <input type="submit" value="Submit">
+    </form>
+    <p>Ao clicar no botao "Submit", os dados do formulario serao enviado para uma pagina W3Schools: "action_page.php"</p>
+</body>
+</html>

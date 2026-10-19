@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        #clientes {
+            font-family: Arial, Helvetica, sans-serif;
+            border-collapse: collapse; /* Tira os espaçamento entre as colunas e linhas */
+            width: 100%;
+        }
+        #clientes td, #clientes th {
+            border: 1px solid black;
+            padding: 10px;
+        }
+        #clientes tr:nth-child(even) { /* Cria uma cor de fundo listrada (uma linha sera colorida e outra não) */
+            background-color: #e0ebeb;
+        }
+        #clientes tr:hover {
+            background-color: #ddd;
+        }
+        #clientes th {
+            padding-top: 12px;
+            padding-bottom: 12px;
+            text-align: center;
+            background-color: #3d5c5c;
+            color: white;
+        }
+    </style>
+    <title>Document</title>
+</head>
+<body>
+    <h1>Tabela Personalizada</h1>
+    <table id="clientes">
+        <tr> <!-- tag de inicio de linha  --> 
+            <th>Nome</th> <!-- cabeçalho da coluna -->
+            <th>Pais</th>
+        </tr>
+        <tr>
+            <td>Maria Flores</td> <!-- dados das colunas --> 
+            <td>Brasil</td>
+        </tr>
+        <tr>
+            <td>Caroline Summer</td>
+            <td>EUA</td>
+        </tr>
+        <tr>
+            <td>Francisco Lopez</td>
+            <td>Argentina</td>
+        </tr>
+        <tr>
+            <td>Arthur Wood</td>
+            <td>Inglaterra</td>
+        </tr>
+    </table>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        a:link {  /*link nao visitado*/
+            color: red;
+        }
+        a:visited {  /*link visitado*/
+            color: green;
+        }
+        a:hover {  /*mouse sobre o link*/
+            color: hotpink;
+        }
+        a:active {  /*link selecionado*/
+            color: blue;
+        }
+    </style>
+</head>
+<body>
+    <h2>Estilo para link, dependendo do seu estado</h2>
+    <p><b><a href="default.asp" target="_blank">Este é um link</a></b></p>
+    <dl>
+        <dt>
+            <p><b>Importante 1:</b></p>
+        </dt>
+        <dd><b>a:hover</b> Deve vir depois de <b>a:link</b> e <b>a:visited</b>, para ser efetivo no CSS</dd>
+        <dt>
+            <p><b>Importante 2:</b></p>
+        </dt>
+        <dd><b>a:active</b> Deve vir depois de <b>a:hover</b>, para ser efetivo no CSS</dd>
+    </dl>
+</body>
+</html>
