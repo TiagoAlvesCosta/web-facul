@@ -11,7 +11,8 @@
     <p id="num"></p>
     <p id="tp_nom"></p>
     <p id="tp_num"></p>
-    <button type="button" onclick="myFunction()">Ao acionar este botao, vou conhecer voce</button>
+    <button type="button" onclick="myFunction()">Ao acionar este botao, vou conhecer voce</button><br>
+    <button type="button" onclick="myFunction()">Outro botao</button>
 
     <script>
         // Declara funçao sem parametro de entrada
@@ -26,7 +27,8 @@
             document.getElementById("num").innerHTML = num + " tambem é meu numero preferido"
 
             // Exibe os tipos de dados das variaveis "nom" e "num" dos elementos HTML com id="tp_nom" e id="tp_num"
-            document.getElementById("tp_nom").innerHTML = "A varivael \"nom\" é uma " + typeof nom;
+            // /".../" serve para colocar aspas no paragrafo
+            document.getElementById("tp_nom").innerHTML = "A varivael \"nom\" é uma " + typeof nom;  // typeof retorna o tipo da variavel
             document.getElementById("tp_num").innerHTML = "A variavel \"num\" é uma " + typeof num;
         }
     </script>

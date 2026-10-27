@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        html {
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            width: 70%;
+            max-width: 900px;
+            min-width: 500px;
+            margin: 0 40px;
+        }
+
+        button {
+            width: 250px;
+        }
+    </style>
+</head>
+
+<body>
+    <h4>JS pode alterar os <b>atributos de elemntos</b> HTML</h4>
+    <p>Alterando o valor do atributo src (source) de uma imagem:</p>
+    <img id="img" src="foto1.png" alt="" style="width: 100px;"> <br>  <!-- imagem original -->
+    <button id="acender">Acende a lampada</button>
+    <button id="apagar">Apaga a lampada</button>
+    <br>
+    <script>
+        // Espera ate que o DOM esteja totalmente carregado
+        document.addEventListener('DOMContentLoaded', function() {
+            // Adiciona um event listener ao botao "Acender"
+            document.getElementById('acender').addEventListener('click', function() {
+                // Muda o atributo 'src' da imagem para acender a lampada
+                document.getElementById('img').src = 'foto1.png'
+            });
+            // Adiciona um event listener ao botao "Apagar"
+            document.getElementById('apagar').addEventListener('click', function() {
+                // Muda o atributo 'src' da imagem para apagar a lampada
+                document.getElementById('img').src = 'foto2.png'
+            });
+        }) ;
+    </script>
+</body>
+</html>

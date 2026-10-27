@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        html {
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+        body {
+            width: 70%;
+            max-width: 900px;
+            min-width: 500px;
+            margin: 0 40px;
+        }
+        button {
+            width: 250px;
+        }
+    </style>
+</head>
+<body>
+    <h4>JS pode alterar o conteudo interno de elementos HTML</h4>
+    <p id="meuTexto">Este é o texto original </p> <!-- Conteudo interno -->
+    <button type="button" id="mudarTexto">Clique aqui para mudar o texto</button>
+    <button type="button" id="voltarTexto">Clique aqui para voltar o texto original</button>
+    <script>
+        // Espera ate que o DOM esteja totalmente carregado
+        document.addEventListener('DOMContentLoaded', function() {
+            // Adiciona um event Listener ao botao "Clique para mudar o texto"
+            document.getElementById('mudarTexto').addEventListener('click', function() {
+                // Muda o conteudo interno do elemento <p> com id "meuTexto"
+                document.getElementById('meuTexto').innerHTML = "Ola, eu sou o JS"
+            });
+            // Adiciona um event listener ao botao "Clique para voltar ao texto original"
+            document.getElementById('voltarTexto').addEventListener('click', function() {
+                // Voltar o conteudo interno do elemento <p> com id = "meuTexto" para o original
+                document.getElementById('meuTexto').innerHTML = "Este é o texto original."
+            })
+        })
+    </script>
+</body>
+</html>

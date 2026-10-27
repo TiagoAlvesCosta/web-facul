@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        html {
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+
+        body {
+            width: 70%;
+            max-width: 900px;
+            min-width: 500px;
+            margin: 0 40px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Jogo Adivinhe um numero</h1>
+    <p>Selecionamos um numero alleatorio entre <b>1</b> e <b>100</b> </p>
+    <p>Veja se consegue adivinhar em <b>10</b> chances ou menos. </p>
+    <p>Nos lhe diremos se seu palpite esta com valor <b>alto</b> ou <b>baixo</b>.</p>
+
+    <div class="form">
+        <label for="campoPalpite">Digite seu palpite: </label>
+        <input type="text" id="campoPalpite" class="campoPalpite">
+        <input type="submit" value="Enviar palpite" class="envioPalpite" onclick="conferirPalpite();">
+    </div>
+
+    <div class="cjtoResultados">
+        <p class="palpites"></p>
+        <p class="ultimoResultado"></p>
+        <p class="baixoOuAlto"></p>
+    </div>
+
+    <script>
+        // Cria um numero aleatorio entre 1 e 100
+        var numeroAleatorio = Math.floor(Math.random() * 100) + 1;
+
+        // Cria variaveis ligadas a elementos com as classes indicadas no querySelector,
+        // para ATUALIZAR esses elementos de acordo com as jogadas
+            var palpites = document.querySelector('.palpites');
+            var ultimoResultado = document.querySelector('.ultimoResultado');
+            var baixoOuAlto = document.querySelector('.baixoOuAlto');
+
+        // Cria variaveis para elementos INPUT com as classes indicadas no querySelector,
+        // para OBTER DADOS desses elementos de acordo com as jogadas
+            var envioPalpite = document.querySelector('.envioPalpite');
+            var campoPalpite = document.querySelector('.campoPalpite');
+            var contagemPalpite = '1';  // Inicia a contagem dos palpites. Max = 10.
+            var botaoReinicio;
+
+        function configFimDeJogo() {
+            campoPalpite.disabled = true;  // desabilita campo de INPUT
+            envioPalpite.disable = true;  // desabilita campo de INPUT
+            botaoReinicio = document.createElement('button');
+            botaoReinicio.textContent = 'Iniciar novo jogo';
+            document.body.appendChild(botaoReinicio);
+            botaoReinicio.addEventListener('click', reiniciarJogo);
+        }
+
+        function reiniciarJogo() {
+            contagemPalpites = 1;
+
+            var reiniciarParas = document.querySelectorAll('cjtoResultados p');
+            for (var i = 0; i < reiniciarParas.lenght; i++) {
+                reiniciarParas[i].textContent = '';
+            }
+            botaoReinicio.parentNode.removeChild(botaoReinicio);
+            campoPalpite.disable = false;
+            envioPalpite.disable = false;
+            campoPalpite.value = '';
+            campoPalpite.focus();
+            ultimoResultado.style.backgroundColor = 'white';
+            numeroAleatorio = Math.floor(Math.random() * 100) + 1;
+        }
+
+        function conferirPalpite() {
+            var palpiteUsuario = Number(campoPalpite.value);
+            if (contagemPalpites === 1) {
+                palpites.textContent = 'Palpites anteriores: ';
+            }
+            palpites.textContent += palpiteUsuario + ' ';  // Informa os numeros ja palpitados
+
+            contagemPalpites++;
+            campoPalpite = '';
+            campoPalpite.focus();
+        }
+    </script>
+</body>
+</html>

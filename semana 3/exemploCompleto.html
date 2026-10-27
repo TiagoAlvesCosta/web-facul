@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Exemplo de multiplos eventos com JS</h2>
+    <button id="botaoClique">Clique em mim</button>
+    <button id="botaoHover">Passe o mouse sobre mim</button>
+    <p id="mensagemClique"></p>
+    <p id="mensagemHover"></p>
+
+    <script>
+        //  Adiciona evento de carregamento de pagina ao documento 
+        document.addEventListener('DOMContentLoaded', function() {
+
+            //  Atribuindo evento de clique ao primeiro botao
+            const botaoClique = document.getElementById('botaoClique');
+            botaoClique.addEventListener('click', function() {
+                const mensagemClique = document.getElementById('mensagemClique')
+                mensagemClique.innerHTML = 'O botao de clique foi clicado';
+            });
+
+            //  Atribuindo evento de mouseover ao segundo botao
+            const botaoHover = document.getElementById('botaoHover');
+            botaoHover.addEventListener('mouseover', function() {
+                const mensagemHover = document.getElementById('mensagemHover');
+                mensagemHover.innerHTML = 'Voce passou o mouse sobre o botao!';
+            });
+
+
+            //  Atribuindo evento de mouseout ao segundo botao
+            botaoHover.addEventListener('mouseout', function() {
+                const mensagemHover = document.getElementById('mensagemHover');
+                mensagemHover.innerHTML = 'Voce tirou o mouse do botao!';
+            });
+        });
+    </script>
+</body>
+</html>
+
+<!-- 
+    1- DOMContentLoaded - Garante que o codigo dentro da função só seja executado após o DOM ter sido completamente carregado
+    2 - addEvenListener (clique) - Adiciona um manipulador de evento CLICK ao primeiro botao, que atualiza o conteudo do paragrafo MENSAGEMCLIQUE quando o botao for clicado
+    3 - assEventListener (mouseover) - Adiciona um manipulador de evento MOUSEOVER ao segundo botao, que atualiza o conteudo do paragrafo MENSAGEMHOVER quando o mouse passa sobre o botao
+    4 - addEvenListener (mouseout) - Adiciona um manipulador de evento MOUSEOUT ao segundo botao, que utiliza o conteudo do paragrafo MENSAGEMHOVER quando o mouse sai do botao
+-->

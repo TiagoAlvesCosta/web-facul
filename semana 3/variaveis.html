@@ -6,81 +6,93 @@
     <title>Document</title>
 </head>
 <body>
-    let meuNome; // declara a variavel "meuNome" sem atribuir valor
-    meuNome = prompt("Qual o seu nome? ");  // atribui o valor digitado pelo usuario a variavel "meuNome"
-    let idade = 27; // declara a variavel "idade" e atribui o valor 27
+    <script>
+        let meuNome; // declara a variavel "meuNome" sem atribuir valor
+        meuNome = prompt("Qual o seu nome? ");  // atribui o valor digitado pelo usuario a variavel "meuNome"
+        let idade = 27; // declara a variavel "idade" e atribui o valor 27
+        const a = 5; // declara a constante "a" e atribui o valor 5
+        const b = 6; // declara a constante "b" e atribui o valor 6 e nao pode ser alterado
+        let soma = a + b; // declara a variavel "soma" e atribui o valor da soma das constantes "a" e "b", podendo ser alterado
+        let A = 10; // declara a variavel "A" e atribui o valor 10
+        let B = 7.89; // declara a variavel "B" e atribui o valor 7.89
+        typeof A; // retorna o tipo de dado da variavel "A"
+        typeof B; // retorna o tipo de dado da variavel "B"
 
-    const a = 5; // declara a constante "a" e atribui o valor 5
-    const b = 6; // declara a constante "b" e atribui o valor 6 e nao pode ser alterado
-    let soma = a + b; // declara a variavel "soma" e atribui o valor da soma das constantes "a" e "b", podendo ser alterado
+      //  OPERADORES ARITMETICOS
+      // + - Adiçao
+      // - - Subtraçao
+      // * - Multiplicaçao
+      // / - Divisao
+      // ** - Exponenciaçao
+      // % - Resto da divisao
+      // ++ - Incremento
+      // -- - Decremento
 
-    let A = 10; // declara a variavel "A" e atribui o valor 10
-    let B = 7.89; // declara a variavel "B" e atribui o valor 7.89
-    typeof A; // retorna o tipo de dado da variavel "A"
-    typeof B; // retorna o tipo de dado da variavel "B"
+      //  OPERADORES DE ATRIBUIÇAO
+      // += - Adiçao e atribuiçao / x = x+y / X = 3; X += 4;X = 7
+      // -= - Subtraçao e atribuiçao / x = x-y / X = 3; X -= 4;X = -1
+      // *= - Multiplicaçao e atribuiçao / x = x*y / X = 3; X *= 4;X = 12
+      // /= - Divisao e atribuiçao / x = x/y / X = 30; X /= 2;X = 15
+      // %= - Resto da divisao e atribuiçao / x = x%y / X = 30; X %= 4;X = 2
+      // **= - Exponenciaçao e atribuiçao / x = x**y / X = 3; X **= 2;X = 9
 
-    OPERADORES ARITMETICOS
-    + - Adiçao
-    - - Subtraçao
-    * - Multiplicaçao
-    / - Divisao
-    ** - Exponenciaçao
-    % - Resto da divisao
-    ++ - Incremento
-    -- - Decremento
+      //  OPERADORES DE COMPARAÇAO
+      // === - Igualdade estrita / 3 === 3; true
+      // !== - Diferente estrito / 3 !== 3; false
+      // > - Maior que / 3 > 2; true
+      // < - Menor que / 3 < 2; false
+      // >= - Maior ou igual a / 3 >= 2; true
+      // <= - Menor ou igual a / 3 <= 2; false
 
-    OPERADORES DE ATRIBUIÇAO
-    += - Adiçao e atribuiçao / X = 3; X += 4;X = 7
-    -= - Subtraçao e atribuiçao / X = 3; X -= 4;X = -1
-    *= - Multiplicaçao e atribuiçao / X = 3; X *= 4;X = 12
-    /= - Divisao e atribuiçao / X = 30; X /= 2;X = 15
-    %= - Resto da divisao e atribuiçao / X = 30; X %= 4;X = 2
-    **= - Exponenciaçao e atribuiçao / X = 3; X **= 2;X = 9
+      // CONDICIONAIS
+        if (condicao) {
+            // bloco de codigo a ser executado se a condiçao for verdadeira
+        }
+        if (condicao1) {
+            // bloco de codigo a ser executado se a condiçao1 for verdadeira
+        } else if (condicao2) {
+            // bloco de codigo a ser executado se a condiçao2 for verdadeira
+        } else {
+            // bloco de codigo a ser executado se nenhuma das condiçoes forem verdadeiras
+        }
 
-    OPERADORES DE COMPARAÇAO
-    === - Igualdade estrita / 3 === 3; true
-    !== - Diferente estrito / 3 !== 3; false
-    > - Maior que / 3 > 2; true
-    < - Menor que / 3 < 2; false
-    >= - Maior ou igual a / 3 >= 2; true
-    <= - Menor ou igual a / 3 <= 2; false
+        switch (expressao) {
+            case x:
+                // bloco de codigo a ser executado se expressao for igual a x
+                break;
+            case y:
+                // bloco de codigo a ser executado se expressao for igual a y
+                break;
+            default:
+                // bloco de codigo a ser executado se expressao nao for igual a nenhum dos valores
+        }
 
-    CONDICIONAIS
-    if (condicao) {
-        // bloco de codigo a ser executado se a condiçao for verdadeira
-    } 
+        // LAÇOS DE REPETIÇAO
+        // Inicio: i = 0; Finaliza: i = 5; A cada repetiçao: i++
+        let texto = " ";
+        for (let i = 0; i < 5; i++) {
+            texto += "O numero é " + i + "<br>";
+        }
 
-    if (condicao1) {
-        // bloco de codigo a ser executado se a condiçao1 for verdadeira
-    } else if (condicao2) {
-        // bloco de codigo a ser executado se a condiçao2 for verdadeira
-    } else {
-        // bloco de codigo a ser executado se nenhuma das condiçoes forem verdadeiras
-    }
+        var i = 1;  // variavel e, de controle da repetição, é incializada
+        var text = " ";
+        while ( i < 5) {  // Enquanto i < 5, repete o bloco
+            text +=" "O numero é " + i;
+             i++;  // A cada repetição, incrementa i
+        }
 
-    switch (expressao) {
-        case x:
-            // bloco de codigo a ser executado se expressao for igual a x
-            break;
-        case y:
-            // bloco de codigo a ser executado se expressao for igual a y
-            break;
-        default:
-            // bloco de codigo a ser executado se expressao nao for igual a nenhum dos valores
-    }
+        //PRINCIPAIS EVENTOS JS
+        /*click - disparado quando um elemento é clicado
+        mouseover - disparado quando o ponteiro do mouse passa sobre um elemento
+        mouseout - ocorre quando o ponteiro do mouse sai de um elemento
+        keydown - disparado quando uma tecla é pressionada
+        keyup - disparado quando uma tecla é liberada
+        change - disparado quando o valor de um elemento de entrada muda
+        submit - disparado quando um formulario é enviado
+        focus - ocorre quando um elemento recebe foco
+        blur - disparado quando um elemento perde o foco*/
 
-    LAÇOS DE REPETIÇAO
-    // Inicio: i = 0; Finaliza: i = 5; A cada repetiçao: i++
-    let text = " ";
-    for (let i = 0; i < 5; i++) {
-        text += "O numero é " + i + "<br>";
-    }
 
-    var i = 1;
-    var text = " ";
-    while ( i < 5) {
-        text +=" "O numero é " + i; 
-        i++;
-    }
+    </script>
 </body>
 </html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- Adiciona evento de click a um botao com id=meuBotao -->
+    <button type="button" id="meuBotao">Clique aqui</button>
+    <script>
+        document.getElementById('meuBotao').addEventListener('click', function() {
+            alert('Botao clicado!'); 
+        })
+    </script>
+
+    <br><br>
+
+    <!-- Adiciona evento de change a um input com id=cpf -->
+    <input type="text" name="ncpf" id="cpf">
+    <script>
+        document.getElementById('cpf').addEventListener('change', function() {
+            alert('Realizado validação do CPF!');
+        })
+    </script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Imprime no console um aviso quando a pgina foi carregada
+            console.log('O DOM foi completammente carregado e analisado.');
+            //  Codigo JS que manipula elementos
+        });
+    </script>
+</body>
+</html>
