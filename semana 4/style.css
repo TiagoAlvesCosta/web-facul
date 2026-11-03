@@ -1,0 +1,26 @@
+.sidebar {
+    margin: 0;
+    padding: 0;
+    width: 200px;
+    background-color: #f1f1f1;
+    position: fixed;
+    height: 100%;
+    overflow: auto;  /*Evita a barra de rolagem */
+}
+
+.sidebar a {
+    display: block;
+    color: black;
+    padding: 16px;
+    text-decoration: none;
+}
+
+.sidebar a.active {  /*Elemento esta sendo atividado pelo usuário*/
+    background-color: rgb(81, 92, 104);
+    color: white;
+}
+
+.sidebar a:hover:not(.active) {  /*Quando o mouse passa por cima / :not(.active) significa que o elemento .active não está ativo*/
+    background-color: rgb(158,183,209);
+    color: white;
+}
