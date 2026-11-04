@@ -3,13 +3,13 @@
     padding: 0;
     width: 200px;
     background-color: #f1f1f1;
-    position: fixed;
+    position: fixed;  /* Mantém a sidebar fixa na página */
     height: 100%;
     overflow: auto;  /*Evita a barra de rolagem */
 }
 
 .sidebar a {
-    display: block;
+    display: block;  /* Faz os links ocuparem toda a largura da sidebar */
     color: black;
     padding: 16px;
     text-decoration: none;
@@ -24,3 +24,137 @@
     background-color: rgb(158,183,209);
     color: white;
 }
+
+.content {
+    padding: 1px 16 px;
+    position: inherit;  /*Mantem a posição do elemento pai*/
+    margin-left: 200px;
+    width: 700px;
+    background: #fff;  /*Cor de fundo do conteúdo*/
+    display: grid; /*Permite a criação de um layout em grade*/
+    overflow: auto;  /*Evita a barra de rolagem */
+    height: 100%;
+}
+
+.content .titleTop {
+    position: relative;  /*Permite o posicionamento relativo do elemento*/
+    max-height: 40px;
+    padding: 10px;
+    background-color: rgb(158,183,209);
+    border-radius: 10px;
+    margin-left: 10px;
+    text-align: center;
+    text-transform: uppercase;  /*Transforma o texto em maiúsculo*/
+    color: white;
+}
+
+.content .titleBottom {
+    position: relative;  /* Permite o posicionamento relativo do elemento */
+    max-height: 40px;
+    text-align: center;
+    margin-left: 20px;
+    color: crimson;
+}
+
+.content .first {
+    position: relative;  /* Permite o posicionamento relativo do elemento */
+    margin-top: 10px;
+    background: #fff;  /* Cor de fundo do conteúdo */
+    padding: 40px;
+}
+
+.content .second {
+    position: relative; /*Permite o posicionamento relativo do elemento*/
+    margin-top: 10px;
+    background: #fff;  /*Cor de fundo do conteúdo*/
+    padding: 40px;
+}
+
+.modal {
+    position: absolute;  /*Permite o posicionamento absoluto do elemento*/
+    display: none;  /*Oculta o modal por padrão*/
+    left: 30%;  /*Posiciona o modal a 30% da esquerda da tela*/
+    top: 30%; /*Posiciona o modal a 30% do topo da tela*/
+    max-width: 200px;
+    background-color: rgb(252, 244, 220);
+    border-radius: 10px;
+    padding: 5px 5px;
+    box-shadow: 0 25px 25px rgb(0 0 0 / 30%);  /*Adiciona uma sombra ao modal*/
+}
+
+.modal .infoH {
+    color: crimson;
+    font-size: medium;
+    text-transform: uppercase;  /*Transforma o texto em maiúsculo*/
+    padding-left: 10px;
+    text-align: center;
+}
+
+.content .menu {
+    position: relative;  /*Permite o posicionamento relativo do elemento*/
+    width: 30%;
+    display: inline-block;  /*Permite que os elementos fiquem lado a lado*/
+    border-radius: 10px;
+}
+
+.content .menuNews {
+    position: relative;  /*Permite o posicionamento relativo do elemento*/
+    width: 30%;
+    display: inline-block;  /*Permite que os elementos fiquem lado a lado*/
+    border-radius: 10px;
+    margin: 10px;
+}
+
+.content .menu .imgStamp {
+    display: block;  /*Faz a imagem ocupar toda a largura do elemento pai*/
+    bottom: 100%;
+    left: 0;
+    right: 0;
+    background-color: rgb(252, 244, 220);
+    overflow: hidden;  /*Oculta o conteúdo que ultrapassa os limites do elemento*/
+    width: 100%;
+    transition: .9s ease;  /*Adiciona uma transição suave ao elemento*/
+}
+
+.menuNews:hover .overlay {
+    bottom: 0;  /*Move a sobreposição para a parte inferior do elemento*/
+    height: 100%;  /*Define a altura da sobreposição para 100% do elemento pai*/
+}
+
+.textImg {
+    white-space: nowrap;  /*Impede que o texto quebre em várias linhas*/
+    color: crimson;
+    font-size: medium;
+    text-align: center;
+    position: absolute;  /*Permite o posicionamento absoluto do elemento*/
+    overflow: hidden;  /*Oculta o conteúdo que ultrapassa os limites do elemento*/
+    top: 50%;  /*Posiciona o elemento no meio da altura do elemento pai*/
+    left: 50%;  /*Posiciona o elemento no meio da largura do elemento pai*/
+    transform: translate(-50%, -50%); /*Centraliza o elemento em relação ao seu ponto de referência*/
+    -ms-transform: translate(-50%, -50%); /*Centraliza o elemento em relação ao seu ponto de referência no Internet Explorer*/
+}
+
+.content .menu .modalButton {
+    outline: none;  /*Remove o contorno do botão*/
+    background-color: crimson;
+    color: white;
+    width: 100%;
+    font-size: 17px;
+    border: none;
+    border-radius: 10px;
+    padding: 7px 7px;
+    box-shadow: 0 25px 25px rgb(0 0 0 / 30%);  /*Adiciona uma sombra ao botão*/
+    cursor: pointer;  /*Altera o cursor para indicar que o elemento é clicável*/
+}
+
+.topright {
+    position: absolute; /*Permite o posicionamento absoluto do elemento*/
+    right: 5px;  /*Posiciona o elemento a 5px da direita do elemento pai*/
+    border-radius: 4px;  /*Adiciona bordas arredondadas ao elemento*/
+    padding: 2px; 
+    top: 0;  /*Posiciona o elemento no topo do elemento pai*/
+    background-color: crimson;  /*Define a cor de fundo do elemento*/
+    color: white;  /*Define a cor do texto do elemento*/
+    cursor: pointer;  /*Altera o cursor para indicar que o elemento é clicável*/
+}
+
