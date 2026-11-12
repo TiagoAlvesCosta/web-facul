@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <!-- Elemento que define o menu -->
+     <div class="sidebar">
+        <a href="index.html" class="active">Home</a>
+        <a href="news.html">News</a>
+        <a href="contact.html">Contact</a>
+        <a href="about.html">About</a>
+     </div>
+
+     <!-- Elemento que define o conteudo da pagina principal -->
+     <div class="content">
+        <h2 class="titleTop">Cupcake Backery Shop</h2>
+        <h3 class="titleBottom">Menu Tradicional</h3>
+
+        <div class="first">
+            <div class="menu">
+                <img src="img/CupFlavor1.jpeg" alt="bolo1" class="imgStamp">
+                <input type="button" class="modalButton" value="Saiba mais..." id="CupFlavor1Button">
+            </div>
+
+            <div class="menu">
+                <img src="img/CupFlavor2.webp" alt="bolo1" class="imgStamp">
+                <input type="button" class="modalButton" value="Saiba mais..." id="CupFlavor2Button">
+            </div>
+
+            <div class="menu">
+                <img src="img/CupFlavor3.avif" alt="bolo2" class="imgStamp">
+                <input type="button" class="modalButton" value="Saiba mais..." id="CupFlavor3Button">
+            </div>
+
+        </div>
+
+        <div class="second">
+            <div class="menu">
+                <img src="img/CupFlavor4.jpeg" alt="bolo4" class="imgStamp">
+                <input type="button" class="modalButton" value="Saiba mais..." id="CupFlavor4Button">
+            </div>
+
+            <div class="menu">
+                <img src="img/CupFlavor5.jpeg" alt="bolo5" class="imgStamp">
+                <input type="button" class="modalButton" value="Saiba mais..." id="CupFlavor5Button">
+            </div>
+
+            <div class="menu">
+                <img src="img/CupFlavor6.webp" alt="bolo6" class="imgStamp">
+                <input type="button" class="modalButton" value="Saiba mais..." id="CupFlavor6Button">
+            </div>
+
+        </div>
+        
+     </div>
+
+     <!-- Modal detalhes -->
+      <div id="knowMore" class="modal">
+        <header>
+            <span id="closeModalButton" class="topright">X</span>
+        </header>
+        <div>
+            <p id="txt" class="infoH"></p>
+            <p id="txt2" class="info"></p>
+            <p id="txt3" class="info"></p>
+        </div>
+      </div>
+
+      <!-- Referencia ao arquivo JS -->
+       <script src="script/script.js"></script>
+</body>
+</html>

@@ -2,7 +2,7 @@ function openModal(cupcake) {
     var txt1 = document.getElementById("txt1");
     var txt2 = document.getElementById("txt2");
     switch (cupcake) {
-        case "CupFlavor1":
+        case "CupFlavor1Button":
             txt1.innerHTML = "Cookies And Cream";
             txt2.innerHTML = "Creme de Negresco no bolo de chocolate";
             txt3.innerHTML = "R$15,00";
